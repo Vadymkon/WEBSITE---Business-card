@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="l_logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="../src/index.css" rel="stylesheet" type="text/css" />
+    <meta
+      name="description"
+      content="LenOK website"
+    />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>LenOK</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class = "background"> 
+      <div class = "l l1"> 
+        <div class="div1"></div>
+        <!-- <div class="div3"></div> -->
+
+        <div class="logo">
+          
+          <div class = 'under-bg'> </div>
+          <div class="under-ds"></div>
+          <p class = 'logo-text'> Jakość </br> Niezawodność</br> Dostępność!</p>
+        <img src="logo.png" class="img-logo"/> 
+
+          
+      </div>
+     </div>
+
+      <div class = "l l2"> 
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#d9f880" d="M52.4,-36.9C60.8,-15.7,55.6,6.7,44.7,23.9C33.7,41,16.8,52.9,-4.6,55.5C-26,58.2,-52.1,51.6,-59.6,36.5C-67.2,21.3,-56.3,-2.4,-43.3,-26.3C-30.2,-50.1,-15.1,-74.1,3.4,-76.1C22,-78.1,44,-58.1,52.4,-36.9Z" transform="translate(100 100)" />
+        </svg>
+        
+      </div>
+
+      <div class = "l l3">
+        <div class="div2"> </div>
+    </div>
+    
+  </div>
+  <span class="contacts" id ="scrollButton"> Łączność</span>
+  <script>
+    const scrollButton = document.getElementById("scrollButton");
+  
+    scrollButton.addEventListener("click", () => {
+      const footer = document.querySelector("footer");
+      footer.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+  <script>
+    document.addEventListener('scroll', function () {
+      var contactsButton = document.querySelector('.contacts');
+      if (
+        document.body.scrollHeight - window.innerHeight >=
+        window.scrollY + 50
+      ) {
+        contactsButton.style.display = 'block';
+      } else {
+        contactsButton.style.display = 'none';
+      }
+    });
+  </script>
+    <main>
+      <aside class = "left">
+        <span class = "circle_ph"><img src="lena_ph.png" class = "profile_ph"/></span>
+        <article class = "text-left"> <p>
+          <h1> Nasz warsztat odzieżowy oferuje szeroki zakres usług: </h1> </br> 
+           <h3>Możemy zamówić drobne naprawy ubrań,
+           w szczególności, pręt i naprawa szwów lub wymiana
+           błyskawica. Jeśli rozmiar ubrań uległ zmianie
+           większe lub mniejsze, nasze atelier może to zrobić
+           dopasuj do rysunku. </h3>
+           <h2>W atelier dostępna jest usługa drukowania na tkaninie.:  ↓ ↓ ↓</h2>
+          </p></article>
+      </aside>
+    <aside class = "right"><h1 class = "text-left">Usługi</h1><div id = "searchfield" class="search-field"> <div id="list"></div> </div>
+
+    </aside>
+
+    <aside class = "left tt2">
+      <article class = "text-left t2"> <p>
+        <h1> Drukowanie nadruku, logo lub rysunku na ubraniach –
+          najlepszy sposób na podkreślenie indywidualności. </h1> </br> 
+         <h2>Drukowanie na ubraniach to: </br> 
+          - Doskonały prezent dla przyjaciół i krewnych na każde wakacje; </br> 
+          - Ubrania firmowe dla pracowników firm; </br> </h2>
+        </p></article>
+    </aside>
+    <aside class = "right"><h1 class = "text-left">DRUK</h1><div id = "searchfield" class="searchfield r2"> 
+      <!-- <div id="swiper" class = "ahaha"></div> -->
+      <div class = "swiper-wrap">
+      <div class="button-container">
+        <input type="button" class="item-num swiper-button" value="&lt;" onclick="prevSlide()">
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="swiper-image" src="1.png" alt="Фотография 1">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-image" src="2.png" alt="Фотография 2">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-image" src="3.png" alt="Фотография 3">
+          </div>
+        </div>
+      </div>
+      
+
+
+      <div class="button-container">
+        <input type="button" class="item-num swiper-button" value="&gt;" onclick="nextSlide()">
+      </div>
+      </div>
+      <script>
+        const container = document.querySelector('.swiper-container');
+        const slides = document.querySelectorAll('.swiper-slide');
+        let currentIndex = 0;
+    
+        function prevSlide() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+          }
+        }
+    
+        function nextSlide() {
+          if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateSlidePosition();
+          }
+        }
+    
+        function updateSlidePosition() {
+
+          slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline:'start'  });
+        }
+      </script>
+      <h2 class = "oao"> 
+        Drukowanie możliwe jest na: Kuchniach, parasolach, sygnale życie, bandanah, eco-torbah, kepky, 
+        bluzy, wiatry, kurtki, raglana, polo z krótkim lub długi rękaw dla dzieci i dorosłych, mężczyzn, damskie, dziecięce koszulki.
+      </h2>
+    </div></aside>
+
+    <!-- partial -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.5/umd/react.production.min.js' defer></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.5/umd/react-dom.production.min.js' defer></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/react-sortable-hoc/0.9.0/react-sortable-hoc.min.js' defer></script> -->
+    <script  type="text/javascript" src="static/js/main.959b9413.js"></script>
+    <!-- <script src='/src/index.js' defer></script> -->
+    <!-- <div id="swiper"></div> -->
+
+    <!-- <div class="widgets-container">
+      <div class="widget" id="widget1">Widget 1</div>
+      <div class="widget" id="widget2">Widget 2</div>
+    </div>
+    <button id="toggleButton">Toggle</button> -->
+    <footer>
+      <p>
+        Oglądaj roboty:</br>
+        9:00 - 18:00</br>
+        (Pn - Pt)</br>
+        Sb: 9:00 - 15:00</br>
+        </p>
+        <p>
+          Contacts:</br>
+          +48 884388085
+        </p>
+        <div class = 'class_for_tabs'>
+        <a href="https://www.instagram.com/lyolk.a/">
+          <div class = 'contact_widg'>
+        <p>Inst: </br>
+          @lyolk.a  
+          </p>
+          <img src="instagram.png">  
+        </div>
+        </a>
+        <a href="https://t.me/Ljolja8"><div class = 'contact_widg'>
+          <p>Telegram:</br>
+             @ljolja8 
+            </p>
+            <img src="telegram.png">  
+          </div>
+        </a>
+          <a href="https://wa.me/qr/NW7PK3FPU4DUA1 "><div class = 'contact_widg'>
+            <p>Whatsapp:</br>
+              lyolka437 
+              </p>
+              <img src="whatsapp.png">  
+            </div>
+            </a>
+            </div>
+
+            <p>
+              Adres:</br>
+              Warszawa, 02-396</br>
+              Geodetów 8/64</br>
+              </p>
+    </footer>
+    </main>
+
+  </body>
+</html>

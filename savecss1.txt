@@ -1,0 +1,753 @@
+body {
+  background-color: whitesmoke;
+  color: #010000;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 400  BlinkMacSystemFont,-apple-system,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,arial,sans-serif;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li {
+  list-style-type: '';
+}
+
+ul {
+  list-style-type: '';
+  padding: 0;
+}
+
+.sortable-item {
+  max-height: 7vmin;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vmin 2vmin 1vmin 2vmin;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.sortable-item:hover {
+  background-color: #c4e26a;
+  border-radius: 10vmin;
+}
+
+.item-packet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price {
+  font-size: 2.5vmin;
+}
+
+.item-name {
+  font-size: 2.5vmin;
+  padding-left: 1vmin;
+}
+
+.item-num {
+  background-color:#c9f54a;
+  
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 100%;
+  margin: 1vmin 1vmin 1vmin 0vmin;
+  font-size: 2.5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track  */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.466); 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c9f54a; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #95b436; 
+}
+.searchfield {
+  background-color: #95b436; 
+   /* #cccac2; */
+  width: 80vmin;
+  min-width: 50vmin;
+  margin: 2vmin auto;
+  padding: 0.3vmin;
+  border-radius: 7%;
+  box-shadow: 10px 10px 75px rgba(0, 0, 0, .11);
+  display: flex;
+  flex-direction: column; 
+  overflow-y: scroll;
+  max-height: 70vmin;
+  flex-grow: 1;              
+}
+
+.right {
+  position: relative;
+  left: 5%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  padding: 0vmin;
+  padding-top: 2%;
+  margin: 0;
+  
+}
+
+.search-field {
+  position: relative;
+  width: 100%;
+  font-size: 2vmin;
+}
+
+
+.searcherf {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searcher {
+  align-items: center;
+  width: 90%;
+  border-radius: 13vmin;
+  border: transparent;
+  padding: 0.85vmin;
+  margin: 1vmin;
+  flex-shrink: 0; 
+  box-shadow: 0 0  5px rgba(255, 255, 255, 0.466); 
+}
+
+
+
+/*Thats not norm code, but it still here bcs it needs checking responsibling on page*/
+/* #swiper {
+  height: 30vmin;
+  width: 30vmin;
+} */
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  min-width: 40vmin;
+  min-height: 40vmin;
+}
+
+.swiper-slide {
+  
+  text-align: center;
+  font-size: 18px;
+  background: #c4e26a;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5vmin;
+}
+
+.swiper-slide img {
+  
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+}
+
+/*//////// SWIPER ///////*/
+.swiper-wrap{
+  position: relative;
+  display: flex;
+  justify-content: center; /* Выравниваем по горизонтали по центру */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  text-align: center;
+}
+.swiper-container {overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+  width: 32vmin;
+  min-height: 36vmin;
+  margin: 0 auto;
+  position: relative;
+  white-space: nowrap;
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.swiper-slide {
+  scroll-snap-align: start;
+      display: inline-block;
+  flex: 0 0 32vmin;
+}
+.swiper-image {
+  width: 12vmin;
+  height: 12vmin;
+}
+.button-container {
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button {
+  
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 1vmin;
+  vertical-align: middle;
+}
+/* WIDGETS */
+
+.widgets-container {
+  position: relative;
+  height: 100px;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.widget {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+/* BACKGROUND */
+
+.background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.l {
+  flex: 0;
+  position: fixed;
+  display: flex;
+  
+  height: inherit;
+  width: 200vmin;
+}
+
+/* Первая полоска (14% высоты страницы) */
+.div1 {
+  height: 100%;
+  width: 30%;
+  background-color: #d0d18e; 
+}
+/* Третья полоска (60% высоты страницы)
+.div3 {
+} */
+
+.l2 {
+  padding-left: 20%;
+  height: 100%;
+  width: 100%;
+}
+/* Вторая полоска (26% высоты страницы) */
+.div2 {
+  margin-left: 16.56%;
+  height: 100%;
+  width: 21.9%;
+  background-color: #42483a;
+}
+
+
+/* MAIN WIDGETS */
+
+main {
+  flex: 1;
+  flex-wrap: wrap;
+  position: absolute;
+  display: flex; 
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  margin: 7vmin;
+  min-width: 58vmin;
+  width: 78vmin;
+  height: 78vmin;
+  /* width: 41.67%; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 6%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  flex-direction: column; 
+}
+
+.tt2 {
+  height: 58vmin;
+}
+
+.text-left {
+  
+  background-color: #f2f3ab;
+  border-radius: 3vmin;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+  padding: 3vmin;
+  margin: 2vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  text-align: center;
+}
+
+h1.text-left {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  font-size: 4vmin;
+  padding: 2vmin;
+  /* padding: 0%; */
+}
+
+.text-left h1 {
+  font-size: 4vmin;
+  margin: 0%;
+  padding: 0%;
+}
+
+.text-left h3 {
+  font-size: 2vmin ;
+  margin: 0%;
+  padding: 0%;
+  font-weight: normal;
+}
+.text-left h2 {
+  font-size: 3vmin;
+  margin: 3%;
+  padding: 0%;
+  font-weight: normal;
+}
+
+.oao {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  font-size: 3vmin;
+  margin: 3%;
+  padding: 0%;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+}
+
+.profile_ph {
+  max-width: 30vmin;
+  max-height: 30vmin;
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.466); 
+}
+
+.logo {
+  position: absolute;
+  height: 13vmin;
+  width: 13%;
+  display: flex;
+  padding: 1vmin;
+  margin: 1vmin;
+}
+
+.under-bg {
+  z-index: 1;
+  background-color: #f1f0a3;
+  width: 100%;
+  height: 40%;
+  margin-top: 7vmin;
+  position: absolute;
+  border-radius: 1vmin 1vmin 5vmin 5vmin;
+}
+
+.under-ds {
+  
+  background-color: #cabc85;
+  width: 100%;
+  height: 50%;
+  margin-top: 7vmin;
+  padding-bottom: 10vmin;
+  position: absolute;
+  border-radius: 1vmin 1vmin 5vmin 5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  text-align: center;
+}
+
+.img-logo {
+  scale: 0.9;
+  z-index: 2;
+}
+
+.logo-text {
+  padding-top: 10.5vmin;
+  padding-left: 4vmin;
+  position: absolute;
+  display: flex;
+
+  
+  justify-content: center;
+  text-align: left;
+  font-size: 2.5vmin;
+}
+
+.contacts {
+  z-index: 5;
+  position: fixed;
+  bottom: 1.5vmin;
+  right: 1.5vmin;
+  width: 20vmin;
+  height: 5vmin;
+  border-radius: 25vmin;
+  font-size: 3vmin;
+  display: flex;
+  justify-content: center; /* Выравниваем по горизонтали по центру */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  text-align: center;
+  background-color: #c9f54a;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.466); 
+}
+
+.t2 {
+  text-align: left;
+}
+
+
+ /* SVG */
+
+.animation-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: changeState 9s linear infinite;
+}
+
+@keyframes changeState {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  33.33%, 66.66% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* В зависимости от состояния, устанавливаем для нужного SVG прозрачность */
+.state-1 {
+  opacity: 1;
+}
+
+.state-2 {
+  opacity: 0;
+}
+
+.state-3 {
+  opacity: 0;
+}
+
+/* 
+.ahaha {
+  min-width: 40vmin;
+  min-height: 40vmin;
+} */
+
+.r2 {
+  padding-top: 2vmin;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Выравниваем по горизонтали по центру */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  text-align: center;
+}
+
+footer {
+  background-color: #42483a;
+  min-height: 30vmin;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.166); 
+  display: flex;
+  justify-content: center; /* Выравниваем по горизонтали по центру */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  flex-wrap: wrap;
+  /* text-align: center; */
+}
+
+.contact_widg
+{
+  display: flex;
+  align-items: center; /* Выравниваем по вертикали по центру */
+  flex-direction: column;
+}
+
+.contact_widg p {
+  padding: 0;
+  margin-bottom: 1vmin;
+}
+
+footer p {
+  color: whitesmoke;
+    font-size: 4vmin;
+    margin: 2vmin;
+    padding: 1vmin;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer img {
+  padding: 0;
+  margin: 0;
+  width: 12vmin;
+  height: 12vmin;
+}
+
+.class_for_tabs {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Выравниваем по горизонтали по центру */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  text-align: center;
+  padding-bottom: 2vmin;
+}
+
+
+/* Для экранов шириной от 768px до 1024px */
+@media  (max-width: 1140px) {
+  .left,
+  .right {
+    width: 90%;
+    padding-top: 0;
+    margin-bottom: 10vmin;
+    display: flex;
+    text-align: center;
+    position: relative;
+  }
+
+  .right {
+    padding-top: 25vmin;
+    position: relative;
+  }
+  .text-left {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .r2 {
+    
+    margin-top: 0;
+  }
+p {
+  font-size: 10vmin;
+}
+
+  .right {
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    padding-bottom: 0;
+    margin-bottom: 0vmin;
+  }
+
+  .contacts {
+    bottom: 3vmin;
+    right: 3vmin;
+    z-index: 5;
+    width: 50vmin;
+    height: 12vmin;
+    font-size: 8vmin;
+  }
+
+  
+.tt2 {
+  height: 58vmin;
+}
+.text-left.t2 {
+  
+  padding-top: 0%;
+  margin-top: 0;
+}
+.text-left {
+  
+  background-color: #e3d59f;
+  border-radius: 3vmin;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+  padding: 3vmin;
+  margin-top: 2vmin;
+  margin-bottom: 1vmin;
+  flex-direction: column; 
+  text-align: center;
+}
+
+h1.text-left {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  font-size: 3vmin;
+  padding: 2vmin;
+  /* padding: 0%; */
+}
+.oao {
+  font-size: 4vmin;
+}
+.text-left h1 {
+  font-size: 6vmin;
+  margin: 0%;
+  padding: 0%;
+}
+
+.text-left h3 {
+  font-size: 3vmin ;
+  margin: 0%;
+  padding: 0%;
+  font-weight: normal;
+}
+.text-left h2 {
+  font-size: 3vmin;
+  margin: 3%;
+  padding: 0%;
+  font-weight: normal;
+}
+.searchfield {
+  width: 100%;
+}
+
+
+.item-packet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price {
+  font-size: 5vmin;
+}
+
+.item-name {
+  font-size: 5vmin;
+  padding-left: 1vmin;
+}
+
+.item-num {
+  background-color:#c9f54a;
+  
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 100%;
+  margin: 1vmin 1vmin 1vmin 0vmin;
+  font-size: 4vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sortable-item {
+  max-height: 7vmin;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4vmin 2vmin 1vmin 2vmin;
+}
+
+
+/*//////// SWIPER ///////*/
+.swiper-container {overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+  width: 32vmin;
+  min-height: 36vmin;
+  margin: 0 auto;
+  position: relative;
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.swiper-slide {
+  flex: 0 0 32vmin;
+}
+.swiper-image {
+  width: 12vmin;
+  height: 12vmin;
+}
+
+/* .button-container {
+  margin-top: 1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button {
+  
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 1vmin;
+  vertical-align: middle;
+} */
+
+}
